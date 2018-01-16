@@ -16,7 +16,8 @@ class Button extends React.Component {
     render() {
         return (
             <div>
-                button 1111
+                button
+                <button onClick={() => console.log(1)}>按钮</button>
             </div>
         );
     }

@@ -4,6 +4,12 @@
   "description": "react public component , Applicable to pc web",
   "main": "index.js",
   "scripts": {
+    "entry": "node config/entry/entryBuild.js",
+    "devBuildHtml": "node config/webpack/webpack.devBuildHtml.conf.js",
+    "devNew": "npm run entry && npm run devBuildHtml",
+    "dev": "webpack-dev-server --devtool eval --progress --colors --profile --config config/webpack/webpack.dev.conf.js",
+    "p": "SET BABEL_ENV=production && webpack --progress --colors --config config/webpack/webpack.prod.conf.js",
+    "ptp": "npm run p && gulp buildTime zip",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
